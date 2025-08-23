@@ -7,11 +7,12 @@ from esphome.const import (
     CONF_UPDATE_INTERVAL,
     DEVICE_CLASS_DISTANCE,
     STATE_CLASS_MEASUREMENT,
-    UNIT_MILLIMETER,
 )
 
 CODEOWNERS = ["@mrtoy-me"]
 DEPENDENCIES = ["i2c"]
+
+UNIT_MILLIMETERS = "mm"
 
 vl53l1x_ns = cg.esphome_ns.namespace("vl53l1x")
 
