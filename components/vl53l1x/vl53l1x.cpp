@@ -400,7 +400,7 @@ bool VL53L1XComponent::get_sensor_id(bool* valid_sensor) {
     return true;
   }
   // 0xEACC = VL53L1X, 0xEBAA = VL53L4CD
-  *valid_sensor = ((this->sensor_id_ == 0xEACC) || (this->sensor_id_ == 0xEBAA));
+  *valid_sensor = ((this->sensor_id_ == 0xEACC) || (this->sensor_id_ == 0xEBAA) || (this->sensor_id_ != 0x0000));
   return true;
 }
 
