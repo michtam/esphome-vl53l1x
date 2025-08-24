@@ -12,7 +12,7 @@ from esphome.const import (
 CODEOWNERS = ["@mrtoy-me"]
 DEPENDENCIES = ["i2c"]
 
-UNIT_MILLIMETERS = "mm"
+UNIT_MILLIMETER = "mm"
 
 vl53l1x_ns = cg.esphome_ns.namespace("vl53l1x")
 
