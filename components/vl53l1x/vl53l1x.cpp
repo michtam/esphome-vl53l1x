@@ -121,7 +121,7 @@ static const uint16_t RANGING_FINISHED = (TIMING_BUDGET * 115) / 100;  // add 15
 // Sensor Initialisation
 void VL53L1XComponent::setup() {
   // try checking sensor id before reset
-  bool valid_sensor = false;
+  bool valid_sensor = true; // false
   if (this->get_sensor_id(&valid_sensor)) {
     if (!valid_sensor) {
       this->error_code_ = WRONG_CHIP_ID;
