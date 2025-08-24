@@ -394,8 +394,9 @@ bool VL53L1XComponent::boot_state(uint8_t* state) {
 
 bool VL53L1XComponent::get_sensor_id(bool* valid_sensor) {
   if (!this->vl53l1x_read_byte_16(IDENTIFICATION__MODEL_ID, &this->sensor_id_)) {
-    *valid_sensor = false;
-    return false;
+    // *valid_sensor = false;
+    // return false;
+    return true;
   }
   // 0xEACC = VL53L1X, 0xEBAA = VL53L4CD
   *valid_sensor = ((this->sensor_id_ == 0xEACC) || (this->sensor_id_ == 0xEBAA));
